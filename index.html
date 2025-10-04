@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ClipGuard - Privacy-focused clipboard protection for macOS, Windows, and Linux. Automatically mask sensitive data like emails, phone numbers, and credit cards.">
+    <meta name="keywords" content="clipboard, privacy, macOS, Windows, Linux, security, data masking, open source">
+    <meta name="author" content="ClipGuard">
+    <meta property="og:title" content="ClipGuard - Protect Your Clipboard Privacy">
+    <meta property="og:description" content="Lightweight system tray app that automatically masks sensitive information in your clipboard. Available for macOS, Windows, and Linux.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clipguard.dev">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>ClipGuard - Protect Your Clipboard Privacy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">ClipGuard</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="https://github.com/qusaismael/ClipGuard" target="_blank">GitHub</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Your Clipboard, <span class="gradient-text">Protected</span></h1>
+                    <p class="hero-subtitle">Lightweight app for macOS, Windows, and Linux that automatically masks sensitive information in your clipboard. Privacy-focused. Open source. Always free.</p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">
+                            <span>Download Free</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 14L5 9H8V3H12V9H15L10 14Z" fill="currentColor"/>
+                                <path d="M3 17H17V15H3V17Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/qusaismael/ClipGuard" class="btn btn-secondary" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
+                            </svg>
+                            <span>View on GitHub</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Privacy</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Data Sent</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">Open</div>
+                            <div class="stat-label">Source</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">ClipGuard Demo</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> echo "Contact: john@example.com, 555-123-4567"
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="before-mask">Contact: john@example.com, 555-123-4567</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> # Copy text above ↑
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span> # ClipGuard automatically masks it ✓
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="after-mask">Contact: [REDACTED_EMAIL], [REDACTED_PHONE]</span>
+                            </div>
+                            <div class="terminal-cursor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Privacy Protection</h2>
+                <p>Comprehensive clipboard security without the complexity</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Auto-Masking</h3>
+                    <p>Automatically detects and masks emails, phone numbers, credit cards, IP addresses, and SSNs in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Smart Detection</h3>
+                    <p>Only masks sensitive data in larger text blocks. Single items copied intentionally remain unchanged.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Link Cleaning</h3>
+                    <p>Strip tracking parameters (utm_*, fbclid, gclid) and unwrap Google/Facebook redirectors automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Fully Customizable</h3>
+                    <p>Add custom regex patterns, disable built-in rules, and configure everything via elegant UI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Easy Restore</h3>
+                    <p>Made a mistake? Restore original unmasked content with one click from the system tray.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern UI</h3>
+                    <p>Beautiful PyQt6 interface with tabbed settings, notifications, and tooltips everywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple, transparent, and effective</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install & Run</h3>
+                        <p>Clone from GitHub, install dependencies, and launch. ClipGuard sits quietly in your system tray.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Copy Anything</h3>
+                        <p>Use your clipboard normally. Copy emails, documents, messages - whatever you need.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Auto-Protected</h3>
+                        <p>ClipGuard instantly detects sensitive patterns and replaces them with placeholders like [REDACTED_EMAIL].</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Paste Safely</h3>
+                        <p>Paste your masked content anywhere. Your privacy is protected automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container">
+            <div class="security-content">
+                <div class="security-badge">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <circle cx="40" cy="40" r="35" stroke="#2ECC71" stroke-width="3" fill="none" opacity="0.2"/>
+                        <circle cx="40" cy="40" r="28" fill="#2ECC71" opacity="0.1"/>
+                        <text x="40" y="55" font-size="45" text-anchor="middle">🔐</text>
+                    </svg>
+                </div>
+                <div class="security-text">
+                    <h2>100% Local Processing</h2>
+                    <p>All data is processed <strong>locally on your machine</strong>. ClipGuard never sends any data over the network. No telemetry, no tracking, no external servers. Your privacy is absolute.</p>
+                    <div class="security-buttons">
+                        <a href="https://github.com/qusaismael/ClipboardMasking" class="btn btn-outline" target="_blank">macOS Source</a>
+                        <a href="https://github.com/qusaismael/ClipboardMaskingWindows" class="btn btn-outline" target="_blank">Windows Source</a>
+                        <a href="https://github.com/qusaismael/ClipGuard" class="btn btn-outline" target="_blank">Linux Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started in Minutes</h2>
+                <p>Available for macOS, Windows, and Linux</p>
+            </div>
+            <div class="download-cards">
+                <div class="download-card">
+                    <div class="distro-icon">🍎</div>
+                    <h3>macOS</h3>
+                    <p class="os-description">Native macOS application with system tray integration</p>
+                    <div class="code-block">
+                        <code>git clone https://github.com/qusaismael/ClipboardMasking.git
+cd ClipboardMasking
+open ClipboardMasking.xcodeproj</code>
+                        <button class="copy-btn" data-code="git clone https://github.com/qusaismael/ClipboardMasking.git&#10;cd ClipboardMasking&#10;pip3 install -r requirements.txt&#10;python3 main.py">Copy</button>
+                    </div>
+                    <div class="download-links">
+                        <a href="https://github.com/qusaismael/ClipboardMasking" class="btn btn-outline" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="download-card">
+                    <div class="distro-icon">🪟</div>
+                    <h3>Windows</h3>
+                    <p class="os-description">Windows application with system tray support</p>
+                    <div class="code-block">
+                        <code>git clone https://github.com/qusaismael/ClipboardMaskingWindows.git
+cd ClipboardMaskingWindows
+</code>
+                        <button class="copy-btn" data-code="git clone https://github.com/qusaismael/ClipboardMaskingWindows.git&#10;cd ClipboardMaskingWindows&#10;pip install -r requirements.txt&#10;python main.py">Copy</button>
+                    </div>
+                    <div class="download-links">
+                        <a href="https://github.com/qusaismael/ClipboardMaskingWindows" class="btn btn-outline" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="download-card">
+                    <div class="distro-icon">🐧</div>
+                    <h3>Linux</h3>
+                    <p class="os-description">Works on Ubuntu, Fedora, Arch, and more</p>
+                    <div class="code-block">
+                        <code>sudo apt install python3 python3-pip xclip git
+git clone https://github.com/qusaismael/ClipGuard.git
+cd ClipGuard && ./run.sh</code>
+                        <button class="copy-btn" data-code="sudo apt install python3 python3-pip xclip git&#10;git clone https://github.com/qusaismael/ClipGuard.git&#10;cd ClipGuard && ./run.sh">Copy</button>
+                    </div>
+                    <div class="download-links">
+                        <a href="https://github.com/qusaismael/ClipGuard" class="btn btn-outline" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="download-footer">
+                <p>📚 Full installation guides available on each repository | 🐛 Report issues on respective GitHub pages</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Protect Your Privacy?</h2>
+            <p>Join privacy-conscious users on macOS, Windows, and Linux protecting their clipboard today</p>
+            <a href="#download" class="btn btn-primary btn-large">Download ClipGuard Now</a>
+            <p class="cta-note">Free forever • Open source • MIT Licensed</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">ClipGuard</span>
+                    </div>
+                    <p>Privacy-focused clipboard protection for macOS, Windows, and Linux.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#download">Download</a></li>
+                            <li><a href="https://github.com/qusaismael/ClipGuard#readme" target="_blank">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="https://github.com/qusaismael/ClipGuard" target="_blank">GitHub</a></li>
+                            <li><a href="https://github.com/qusaismael/ClipGuard/issues" target="_blank">Issues</a></li>
+                            <li><a href="https://github.com/qusaismael/ClipGuard/discussions" target="_blank">Discussions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="https://github.com/qusaismael/ClipGuard/blob/main/LICENSE" target="_blank">MIT License</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ClipGuard. Made with ❤️ for privacy-conscious users everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
